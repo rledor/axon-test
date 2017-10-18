@@ -12,16 +12,8 @@ public class TaskCreatedEvent {
 		return taskId;
 	}
 	
-	public void setTaskId(int taskId) {
-		this.taskId = taskId;
-	}
-	
 	public String getName() {
 		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 }

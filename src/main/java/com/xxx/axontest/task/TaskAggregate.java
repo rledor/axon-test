@@ -7,7 +7,6 @@ import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.commandhandling.model.AggregateLifecycle;
 import org.axonframework.commandhandling.model.AggregateRoot;
 import org.axonframework.eventsourcing.EventSourcingHandler;
-import org.axonframework.spring.stereotype.Aggregate;
 
 @AggregateRoot
 public class TaskAggregate {
@@ -18,15 +17,6 @@ public class TaskAggregate {
 	private int taskId;
 	private String name;
 	
-	public TaskAggregate(int taskId) {
-		this.taskId = taskId;
-	}
-	
-	public TaskAggregate(int taskId, String name) {
-		this.taskId = taskId;
-		this.name = name;
-	}
-
 	@CommandHandler
 	public void handleCommand(CreateTaskCommand createTaskCommand) {
 		logger.info("Command received");

@@ -3,6 +3,7 @@ package com.xxx.axontest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
+import org.axonframework.spring.config.annotation.AnnotationCommandHandlerBeanPostProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -19,9 +20,15 @@ public class App {
 		commandGateway.send(new CreateTaskCommand(123, "asd"));
 	}
 	
+	
 	@Bean
 	public EventStorageEngine eventStorageEngine() {
 		return new InMemoryEventStorageEngine();
+	}
+	
+	@Bean
+	public AnnotationCommandHandlerBeanPostProcessor annotationCommandHandlerBeanPostProcessor() {
+		return new AnnotationCommandHandlerBeanPostProcessor();
 	}
 	
 }
