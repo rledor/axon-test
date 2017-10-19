@@ -1,11 +1,14 @@
 package com.xxx.axontest.task;
 
-public class TaskCreatedEvent {
+import org.axonframework.commandhandling.TargetAggregateIdentifier;
 
+public class UpdateTaskCommand {
+
+	@TargetAggregateIdentifier
 	private final int taskId;
 	private final String status;
 	
-	public TaskCreatedEvent(int taskId, String status) {
+	public UpdateTaskCommand(int taskId, String status) {
 		this.taskId = taskId;
 		this.status = status;
 	}

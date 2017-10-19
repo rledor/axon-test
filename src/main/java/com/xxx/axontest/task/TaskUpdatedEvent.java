@@ -1,11 +1,11 @@
 package com.xxx.axontest.task;
 
-public class TaskCreatedEvent {
+public class TaskUpdatedEvent {
 
 	private final int taskId;
 	private final String status;
 	
-	public TaskCreatedEvent(int taskId, String status) {
+	public TaskUpdatedEvent(int taskId, String status) {
 		this.taskId = taskId;
 		this.status = status;
 	}
