@@ -1,4 +1,4 @@
-package com.xxx.axontest.task;
+package com.xxx.axontest.cmd.task;
 
 public class TaskCreatedEvent {
 

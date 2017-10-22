@@ -1,4 +1,4 @@
-package com.xxx.axontest;
+package com.xxx.axontest.cmd;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
@@ -10,8 +10,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import com.mongodb.MongoClient;
-import com.xxx.axontest.task.CreateTaskCommand;
-import com.xxx.axontest.task.UpdateTaskCommand;
+import com.xxx.axontest.cmd.task.CreateTaskCommand;
+import com.xxx.axontest.cmd.task.UpdateTaskCommand;
 
 @SpringBootApplication
 public class App {

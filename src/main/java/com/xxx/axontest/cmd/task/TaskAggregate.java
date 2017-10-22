@@ -1,4 +1,4 @@
-package com.xxx.axontest.task;
+package com.xxx.axontest.cmd.task;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
